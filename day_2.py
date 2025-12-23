@@ -11,7 +11,7 @@ def into_parts(word: str, num_parts: int = 2) -> list[str]:
     
     return parts
 
-def sum_pattern(start: int, end: int, num_parts:int = 2) -> int:
+def sum_pattern(start: int, end: int, included: list[bool], num_parts:int = 2) -> tuple[int, list[bool]]:
     total = 0
     
     for id in range(start, end+1):
@@ -26,23 +26,26 @@ def sum_pattern(start: int, end: int, num_parts:int = 2) -> int:
             if parts[i] != parts[i+1]:
                 flag = False
         
-        if flag:
-            # print(f"Fraudulent id: {id}")
+        if flag and not included[id - start]:
             total += id
+            included[id - start] = True
     
-    return total
+    return (total, included)
 
 def solve_1(filename: str) -> int:
     ranges= read_file(filename, ",")
     
     total = 0
     
-    for range in ranges:
-        nums = range.split("-")
+    for a_range in ranges:
+        nums = a_range.split("-")
         start = int(nums[0])
         end = int(nums[1])
         
-        total += sum_pattern(start, end, 2)
+        num_included: list[bool] = [False for _ in range(start, end+1)]
+
+        new_total, _= sum_pattern(start, end, num_included, 2)
+        total += new_total
     
     print(f"Total of the fraudulent ids is: {total}")
     return total
@@ -59,9 +62,13 @@ def solve_2(filename: str) -> int:
         
         min_parts: int = 2
         max_parts: int = len(str(end))
+
+        num_included: list[bool] = [False for _ in range(start, end+1)]
         
         for num_parts in range(min_parts, max_parts+1):
-            total += sum_pattern(start, end, num_parts)
+            new_total, num_included = sum_pattern(start, end, num_included, num_parts)
+
+            total += new_total
     
     print(f"Total of the new fraudulent ids is: {total}")
     return total
