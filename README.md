@@ -14,8 +14,8 @@ Following [Advent of Code 2025](https://adventofcode.com/2025/). Only 12 days th
 - [x] Day 5 ⭐⭐
 - [x] Day 6 ⭐
 - [x] Day 6 ⭐⭐
-- [ ] Day 7 ⭐
-- [ ] Day 7 ⭐⭐
+- [x] Day 7 ⭐
+- [x] Day 7 ⭐⭐
 - [ ] Day 8 ⭐
 - [ ] Day 8 ⭐⭐
 - [ ] Day 9 ⭐
