@@ -24,7 +24,14 @@ Following [Advent of Code 2025](https://adventofcode.com/2025/). Only 12 days th
 - [x] Day 10 ⭐⭐✨
 - [x] Day 11 ⭐
 - [x] Day 11 ⭐⭐
-- [ ] Day 12 ⭐
-- [ ] Day 12 ⭐⭐
+- [x] Day 12 ⭐ 🌐
+- [x] Day 12 ⭐⭐ 
 
 ✨ -> Mark of shame....
+
+## But I completed everything!
+
+# 🎆🎇🎆🎇🎆🎇🎆🎇
+# 🎇🎆🎇🎆🎇🎆🎇🎆
+# 🎆🎇🎆🎇🎆🎇🎆🎇
+# 🎇🎆🎇🎆🎇🎆🎇🎆
